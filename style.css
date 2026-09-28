@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    min-height: 100vh;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* LOGIN */
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.login-card h2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.login-card label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.login-card input {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.login-card button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #111;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-card button:hover {
+    opacity: 0.85;
+}
+
+.error {
+    color: #d00000;
+    margin-top: 12px;
+    text-align: center;
+}
+
+
+/* DIGITALT SKOLKORT */
+
+.school-card {
+    width: 100%;
+    max-width: 430px;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background: #111;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.card-header h1 {
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.card-header p {
+    font-size: 17px;
+}
+
+.student-info {
+    padding: 25px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.info-row span {
+    color: #666;
+}
+
+.info-row strong {
+    text-align: right;
+}
+
+.authorization {
+    margin-top: 20px;
+    padding: 14px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    background: #e8f7e8;
+    color: #168316;
+}
+
+.authorization.not-authorized {
+    background: #ffe8e8;
+    color: #c00000;
+}
+
+#useCardButton {
+    display: block;
+    width: calc(100% - 50px);
+    margin: 0 25px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #111;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#useCardButton:hover {
+    opacity: 0.85;
+}
+
+.access-message {
+    text-align: center;
+    margin: 18px 25px;
+    font-weight: bold;
+}
+
+.logout {
+    display: block;
+    width: calc(100% - 50px);
+    margin: 10px 25px 25px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.logout:hover {
+    background: #f2f2f2;
+}
+
+
+
+.qr-box {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background: #fafafa;
+    border-radius: 12px;
+    border: 2px dashed #ddd;
+}
+
+.qr-box p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #666;
+    text-align: center;
+}

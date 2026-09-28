@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pauliskolan - Digitalt skolkort</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+    <!-- LOGIN -->
+    <div id="loginPage" class="page">
+        <div class="login-card">
+            <h1>PAULISKOLAN</h1>
+            <h2>Digitalt skolkort</h2>
+
+            <form id="loginForm">
+                <label for="studentId">Elev-ID</label>
+                <input type="text" id="studentId" placeholder="Skriv ditt Elev-ID" required>
+
+                <label for="password">Lösenord</label>
+                <input type="password" id="password" placeholder="Skriv ditt lösenord" required>
+
+                <p id="loginError" class="error"></p>
+
+                <button type="submit">Logga in</button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- DIGITALT SKOLKORT -->
+    <div id="cardPage" class="page hidden">
+
+        <div class="school-card">
+
+            <div class="card-header">
+                <h1>PAULISKOLAN</h1>
+                <p>Digitalt skolkort</p>
+            </div>
+
+            <div class="student-info">
+
+                <div class="info-row">
+                    <span>Namn</span>
+                    <strong id="studentName"></strong>
+                </div>
+
+                <div class="info-row">
+                    <span>Elev-ID</span>
+                    <strong id="displayStudentId"></strong>
+                </div>
+
+                <div class="info-row">
+                    <span>Kort-ID</span>
+                    <strong id="cardId"></strong>
+                </div>
+
+                <div class="authorization">
+                    <span id="authorizationStatus"></span>
+                </div>
+
+                <!-- NYTT: QR-KODSRUTA -->
+                <div id="qrContainer" class="qr-box hidden">
+                    <div id="qrcode"></div>
+                    <p>Skanna koden mot läsaren vid dörren</p>
+                </div>
+
+            </div>
+
+            <button id="useCardButton">
+                Använd digitalt skolkort
+            </button>
+
+            <p id="accessMessage" class="access-message"></p>
+
+            <button id="logoutButton" class="logout">
+                Logga ut
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- LÄNKAR: QR-Bibliotek & Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
